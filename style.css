@@ -111,6 +111,11 @@ body {
   min-height: 80px; /* Ensures consistent height */
 }
 
+.site-footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px, 40px;
+}
 .header-content {
   text-align: center;
 }
