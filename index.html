@@ -1,74 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蔵王ジャンプ台AR謎解き</title>
-
-    <link rel="stylesheet" href="css/zao.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ローカル情報ポータル</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="site-header">
+  <div class="header-content">
+    <h1>ローカル情報ポータル</h1>
+    <p>地域の魅力を発信するサイト</p>
+  </div>
+  <div id="weather" class="weather-box">
+    読み込み中...
+  </div>
+</header>
 
-    <!-- タイトル画面 -->
-    <section id="title-screen" class="screen">
-        <div class="title-card">
-            <h1>🏔️ 蔵王ジャンプ台<br>AR謎解きゲーム</h1>
+  <main class="container">
+    <div class="content-wrapper">
+      <div class="main-column">
+        <section class="card">
+          <h2>最新ニュース</h2>
+          <ul id="news-list" class="news-list">
+            <li><span class="loading">読み込み中...</span></li>
+          </ul>
+        </section>
 
-            <p class="subtitle">
-                ジャンプ台に隠された謎を解き明かそう！
-            </p>
+        <section class="card">
+          <h2>開催予定のイベント</h2>
+          <ul id="event-list" class="event-list">
+             </ul>
+        </section>
+      </div>
 
-            <button id="start-btn">
-                ▶ スタート
-            </button>
-        </div>
-    </section>
-
-    <!-- ゲーム画面 -->
-    <section id="game-screen" class="screen hidden">
-
-        <header class="game-header">
-
-            <div id="stage-info">
-                Stage 1
+      <div class="side-column">
+        <section class="card highlight-card">
+          <h2>🍁 季節のおすすめ</h2>
+          <div id="seasonal-content">
             </div>
+        </section>
 
-            <div class="progress-bar">
-                <div id="progress-fill"></div>
+        <section class="card quiz-card">
+          <h2>🧠 今日のご当地クイズ</h2>
+          <div id="quiz-content">
             </div>
+        </section>
+      </div>
+    </div>
+  </main>
 
-        </header>
+  <footer class="site-footer">
+    <p>&copy; 2026 Local Portal Site</p>
+    <h3>問い合わせ</h3>
+    <address>
+  <p>蔵王温泉観光協会 〒990-2301 山形市蔵王温泉708-1</p>
+  <p>TEL：023-694-9328</p>
+</address>
+  </footer>
 
-        <main>
-
-            <div id="content-area">
-            </div>
-
-            <div id="input-area">
-
-                <input
-                    id="answer-input"
-                    type="text"
-                    placeholder="答えを入力">
-
-                <button id="submit-btn">
-                    回答する
-                </button>
-
-            </div>
-
-            <div id="message"></div>
-
-        </main>
-
-    </section>
-
-    <script src="js/config.js"></script>
-    <script src="js/storage.js"></script>
-    <script src="js/game.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/quiz.js"></script>
-    <script src="js/main.js"></script>
-
+  <script src="main.js"></script>
 </body>
 </html>
