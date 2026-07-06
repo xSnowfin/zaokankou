@@ -1,0 +1,320 @@
+/* ===========================
+   ZAO AR QUIZ Ver2.0
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Yu Gothic","Meiryo",sans-serif;
+    min-height:100vh;
+    background:linear-gradient(180deg,#7fd3ff 0%,#dff6ff 45%,#ffffff 100%);
+    color:#333;
+}
+
+/* 共通 */
+
+.screen{
+    width:100%;
+    min-height:100vh;
+    padding:24px;
+}
+
+.hidden{
+    display:none;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+    border-radius:18px;
+    font-size:18px;
+    font-weight:bold;
+    padding:15px 28px;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+/* =====================
+   タイトル
+===================== */
+
+#title-screen{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.title-card{
+
+    width:min(95%,500px);
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+.title-card h1{
+
+    color:#0094ff;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+    line-height:1.3;
+}
+
+.subtitle{
+
+    margin-bottom:35px;
+
+    font-size:17px;
+
+    color:#555;
+}
+
+#start-btn{
+
+    width:100%;
+
+    background:#ff9800;
+
+    color:white;
+
+    font-size:22px;
+}
+
+#start-btn:hover{
+
+    background:#ffad26;
+}
+
+/* =====================
+ゲーム画面
+===================== */
+
+.game-header{
+
+    max-width:800px;
+
+    margin:auto;
+}
+
+#stage-info{
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    color:#0b74d8;
+
+    margin-bottom:18px;
+}
+
+/* Progress */
+
+.progress-bar{
+
+    width:100%;
+
+    height:14px;
+
+    background:#d8e9f9;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    margin-bottom:28px;
+}
+
+#progress-fill{
+
+    width:20%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#00d084,#59ffbe);
+
+    transition:.5s;
+}
+
+/* =====================
+カード
+===================== */
+
+#content-area{
+
+    max-width:800px;
+
+    margin:auto;
+}
+
+.question,
+.ar-box,
+.minigame-box{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+
+    margin-bottom:24px;
+
+    animation:fadeUp .4s ease;
+}
+
+.question{
+
+    font-size:25px;
+
+    line-height:1.8;
+}
+
+/* =====================
+入力
+===================== */
+
+#input-area{
+
+    max-width:800px;
+
+    margin:20px auto;
+
+    display:flex;
+
+    gap:15px;
+}
+
+#answer-input{
+
+    flex:1;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    border:2px solid #ddd;
+
+    font-size:18px;
+}
+
+#answer-input:focus{
+
+    border-color:#00a2ff;
+
+    outline:none;
+}
+
+#submit-btn{
+
+    background:#00a2ff;
+
+    color:white;
+
+    min-width:160px;
+}
+
+#submit-btn:hover{
+
+    background:#1bb1ff;
+}
+
+/* =====================
+メッセージ
+===================== */
+
+#message{
+
+    max-width:800px;
+
+    margin:25px auto;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#00a651;
+
+    min-height:40px;
+}
+
+/* =====================
+Animation
+===================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* =====================
+スマホ
+===================== */
+
+@media(max-width:768px){
+
+.title-card{
+
+    padding:28px;
+}
+
+.title-card h1{
+
+    font-size:30px;
+}
+
+.question{
+
+    font-size:21px;
+}
+
+#input-area{
+
+    flex-direction:column;
+}
+
+#submit-btn{
+
+    width:100%;
+}
+
+}
