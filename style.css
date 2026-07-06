@@ -195,3 +195,21 @@ body {
   border-radius: 5px;
   margin: 20px 0;
 }
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .weather-box {
+    position: static; /* absoluteを解除 */
+    width: fit-content;
+  }
+
+  .header-content {
+    text-align: center;
+  }
+}
