@@ -83,7 +83,7 @@ async function fetchQuizList() {
       // quiz-detail.html へのリンクを作成
       div.innerHTML = `
         <a href="quiz-detail.html?id=${item.id}" class="quiz-link-item">
-          📝 ${item.title}
+          ${item.title}
         </a>
       `;
       quizContainer.appendChild(div);
