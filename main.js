@@ -51,13 +51,13 @@ async function fetchSeasonal() {
     seasonalContainer.innerHTML = '';
 
     if (data.contents.length > 0) {
-      const item = data.contents[0];
-      // 画像タグを削除し、タイトルとリンクのみにする
-      seasonalContainer.innerHTML = `
-        <div class="seasonal-item">
-          <a href="seasonal.html?id=${item.id}">${item.title}</a>
-        </div>
-      `;
+      data.contents.forEach(item => {
+        seasonalContainer.innerHTML += `
+          <div class="seasonal-item">
+            <a href="seasonal.html?id=${item.id}">${item.title}</a>
+          </div>
+        `;
+      });
     } else {
       seasonalContainer.innerHTML = '<p>現在おすすめはありません</p>';
     }
