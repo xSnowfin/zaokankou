@@ -23,7 +23,7 @@ async function fetchNews() {
 
 // --- イベントを取得して表示する関数 ---
 async function fetchEvents() {
-  const url = `https://${SERVICE_DOMAIN}.microcms.io/api/v1/event`;
+  const url = `https://${SERVICE_DOMAIN}.microcms.io/api/v1/event?limit=2`;
   try {
     const response = await fetch(url, { headers: { 'X-MICROCMS-API-KEY': API_KEY } });
     const data = await response.json();
@@ -41,7 +41,7 @@ async function fetchEvents() {
 
 // --- 季節のおすすめを取得して表示する関数 ---
 async function fetchSeasonal() {
-  const url = `https://${SERVICE_DOMAIN}.microcms.io/api/v1/seasonal`;
+  const url = `https://${SERVICE_DOMAIN}.microcms.io/api/v1/seasonal?limit=2`;
   try {
     const response = await fetch(url, { headers: { 'X-MICROCMS-API-KEY': API_KEY } });
     const data = await response.json();
