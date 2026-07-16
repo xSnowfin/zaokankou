@@ -22,6 +22,22 @@ body {
   min-height: calc(100vh - 350px);
 }
 
+/* Container rules */
+.map-container {
+  width: 100%;
+  max-width: 800px;      /* Restricts the map from becoming too wide on desktops */
+  margin: 20px auto;     /* Centers the map container on the page */
+}
+
+/* Map adjustment rules */
+.map-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;  /* Maintains a perfect cinematic scale across devices */
+  border: 0;             /* Eliminates unnecessary outer borders */
+  border-radius: 8px;    /* Optional: Rounds the corners slightly for look */
+}
+
+
 /* レイアウト（PCでは2カラム、スマホでは1カラム） */
 .content-wrapper {
   display: flex;
